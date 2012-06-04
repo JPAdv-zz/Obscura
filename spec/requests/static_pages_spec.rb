@@ -2,40 +2,42 @@ require 'spec_helper'
 
 describe "Static pages" do
 
-  #If I want to change the title, change the string.
-  let(:base_title) {"Obscura"}
+  subject { page }
 
+  #Testing the Welcome page.
   describe "Welcome page" do
+    #Make sure to visit the path before each test.
+    before { visit root_path }
 
-    it "should have the h1 'Welcome!'" do
-      visit '/static_pages/home'
-      page.should have_selector('h1', :text => 'Welcome!')
-    end
-
-    it "should have the base title 'Obscura'" do
-      visit '/static_pages/home'
-      page.should have_selector('title', :text => 'Obscura')
-    end
-
-    it "should not have a costume title" do
-      visit '/static_pages/home'
-      page.should_not have_selector('title', :text => '| Home')
-    end
+    it { should have_selector('h1', text: 'Welcome!') }
+    it { should have_selector('title', text: full_title('')) }
+    it { should_not have_selector('title', text: '| Home') }
   end
 
+  #Testing the Help page.
   describe "Help page" do
+    #Make sure to visit the path before each test.
+    before { visit help_path }
 
-  	it "should have the h1 'Help Page'" do
-  		visit '/static_pages/help'
-  		page.should have_selector('h1', :text => 'Help Page')
-  	end
-
-    it "should have the title 'Help'" do
-      visit '/static_pages/help'
-      page.should have_selector('title', :text => "#{base_title} | Help")
-    end
+    #Tests that the header contains 'Help Page'
+  	it { should have_selector('h1', text: 'Help Page') }
+    #Tests that the title contains 'Obscura | Help'
+    it { should have_selector('title', text: full_title('Help')) }
   end
 
+  #Testing the Contact page.
+  describe "Contact page" do
+    #Make sure to visit the path before each test.
+    before { visit contact_path }
+
+    #Tests that the header contains 'Contact'
+    it { should have_selector('h1', :text => 'Contact') }
+    #Tests that the title contains 'Obscure | Contact'
+    it { should have_selector('title', :text => full_title('Contact')) }
+  end
+
+  #Another way of creating the above tests.
+  #Testing the About page.
   describe "About page" do
 
   	it "should have the content 'About Me'" do
@@ -45,7 +47,7 @@ describe "Static pages" do
 
     it "should have the title 'About Me'" do
       visit '/static_pages/about'
-      page.should have_selector('title', :text => "#{base_title} | About Me")
+      page.should have_selector('title', :text => full_title('About Me'))
     end
   end
 end
