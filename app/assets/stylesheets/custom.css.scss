@@ -113,11 +113,13 @@ header {
 }
 
 .container {
+  background-image: url(bg.gif);
 	position: relative;
   padding: 15px;
   padding-top: 100px;
   margin: auto;
   background-color: #fff;
+  box-shadow: -8px 0px 20px rgba(0,0,0,0.5), 8px 0px 20px rgba(0,0,0,0.5);
 	width: 1000px;
 	top: -70px;
   border-top-left-radius: 3px;
