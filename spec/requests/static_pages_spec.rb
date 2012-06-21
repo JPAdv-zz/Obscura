@@ -10,7 +10,6 @@ describe "Static pages" do
     it { should have_selector('title', text: full_title(page_title)) }
   end
 
-
   #Testing the Welcome page while using the shared_examples_for method.
   describe "Welcome page" do
     #Make sure to visit the path before each test.
