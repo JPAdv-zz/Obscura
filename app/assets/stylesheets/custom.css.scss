@@ -1,4 +1,6 @@
-/* A costum css file. */
+/* A costum css file. Created by: Jose Padilla.*/
+//If you happen to do some modifications of the navbar,
+//please be polite and credit the author. ^_^
 
 html {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -19,7 +21,9 @@ body {
 	width: auto;
 }
 
-/* The website's header */
+// The website's header (Navigation bar actually).
+// Note: This is a bad way of using scss. It will be updated
+// at a later time to take advantage of SASS features.
 
 header {
   display: block;
