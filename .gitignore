@@ -20,7 +20,3 @@ doc/
 *~
 .project
 .DS_Store
-
-# Ignore Gemfiles
-Gemfile
-Gemfile.lock
