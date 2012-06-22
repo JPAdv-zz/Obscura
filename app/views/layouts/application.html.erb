@@ -14,7 +14,11 @@
 		<!-- Create the header, container, and footer -->
 		<%= render 'layouts/header' %>
 		<div class='container'>
-			<%= yield %>
+			<div class='box'>
+				<div class="main">
+					<%= yield %>
+				</div>
+			</div>
 			<%= render 'layouts/footer' %>
 		</div>
 	</body>
