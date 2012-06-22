@@ -2,23 +2,59 @@
 //If you happen to do some modifications of the navbar,
 //please be polite and credit the author. ^_^
 
+* {  
+    padding: 0;
+    margin: 0;
+  }
+
 html {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	text-decoration: none;
-}
+  height: 100%;
 
-body {
-	a {
+  body {
+	 a {
       color: #555;
       &:hover { 
         color: #DDD;
       }
-		text-decoration: none;
-	}
-	color: gray;
-  background-image: url(bg.png);
-	background-color: darkgray;
-	width: auto;
+		  text-decoration: none;
+	 }
+	 color: gray;
+   background-image: url(bg.png);
+	 background-color: darkgray;
+	 width: auto;
+  }
+}
+
+.container {
+  background-image: url(bg.gif);
+  position: relative;
+  padding: 15px;
+  padding-top: 100px;
+  top: -70px;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: -8px 0px 20px rgba(0,0,0,0.5), 8px 0px 20px rgba(0,0,0,0.5);
+  width: 1000px;
+  border-left: solid 2px #ededed;
+  border-right: solid 2px #ededed;
+}
+
+.box {
+  position: relative;
+  top: 40px;
+  background-color: #ededed;
+  min-height: 100%;
+}
+
+.main {
+  position: relative;
+  padding-bottom: 200px;
+  margin-bottom: 70px;
+  padding-top: 40px;
+  padding-left: 30px;
+  overflow: auto;
 }
 
 // The website's header (Navigation bar actually).
@@ -72,7 +108,7 @@ header {
 .nav-btn {
   position: relative;
   display: block;
-  top: -35px;
+  top: -19px;
   padding: 20px;
   width: 60px;
   height: 15px;
@@ -116,27 +152,15 @@ header {
   }
 }
 
-.container {
-  background-image: url(bg.gif);
-	position: relative;
-  padding: 15px;
-  padding-top: 100px;
-  margin: auto;
-  background-color: #fff;
-  box-shadow: -8px 0px 20px rgba(0,0,0,0.5), 8px 0px 20px rgba(0,0,0,0.5);
-	width: 1000px;
-	top: -70px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
-
 /* The website's footer */
 footer {
   position: relative;
+  background-color: #3d3d3d;
   text-shadow: 0 1px 1px rgba(0,0,0,0.7);
-  margin-top: 45px;
-  padding-top: 5px;
-	border-top: 1px solid #fff;
+  margin-top: -200px;
+  height: 200px;
+  clear: both;
+	border-top: 5px solid #353535;
 	color: #999;
 	a {
 	 color: #555;
