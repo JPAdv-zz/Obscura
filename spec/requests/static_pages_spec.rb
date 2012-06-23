@@ -16,12 +16,12 @@ describe "Static pages" do
     before { visit root_path }
 
     #Assign some variables so that the shared_examples_for method can use them.
-    let(:heading) {'Welcome!'}
+    let(:heading) {'Jose Padilla'}
     let(:page_title) {''}
 
     #Begin testing the Welcome page.
     it_should_behave_like "all static pages"
-    it { should_not have_selector('title', text: '| Home') }
+    it { should_not have_selector('title', text: '| Jose Padilla') }
   end
 
   #Testing the Tutorials page without using the shared_examples_for method.
