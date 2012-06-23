@@ -191,6 +191,7 @@ footer {
 }
 
 .home_slideshow {
+  height: 350px;
   h1 {
     position: relative;
     top: -25px;
@@ -220,9 +221,9 @@ footer {
 }
 
 #slides {
-  position:relative;
-  top:5px;
-  left:250px;
+  position: absolute;
+  top:98px;
+  left:280px;
   z-index:100;
 }
 
