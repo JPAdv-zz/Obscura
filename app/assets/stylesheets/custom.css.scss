@@ -29,17 +29,17 @@ html {
 
 .container {
   background-image: url(bg.gif);
-  position: relative;
-  padding: 15px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   padding-top: 100px;
-  top: -70px;
   margin: auto;
   background-color: #fff;
   box-shadow: -8px 0px 20px rgba(0,0,0,0.5), 8px 0px 20px rgba(0,0,0,0.5), 0px 8px 20px rgba(0,0,0,0.5);
   width: 1100px;
   border-left: solid 2px #ededed;
   border-right: solid 2px #ededed;
-  border-bottom: solid 2px #ededed;
   z-index: 0;
 }
 
@@ -191,7 +191,7 @@ footer {
 }
 
 .home_slideshow {
-  height: 350px;
+  height: 520px;
   h1 {
     position: relative;
     top: -25px;
@@ -214,17 +214,16 @@ footer {
   Slideshow
 */
 
-#frame {
-  position: absolute;
-  top: 80px;
-  left: 195px;
-}
 
 #slides {
   position: absolute;
   top:98px;
-  left:280px;
+  left:39px;
   z-index:100;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.5), 0px -2px 8px rgba(0,0,0,0.5);
+  height: 420px;
+  border: solid 2px #ededed;
+  border-radius: 5px;
 }
 
 /*
@@ -235,8 +234,8 @@ footer {
 */
 
 .slides_container {
-  width:570px;
-  height:270px;
+  width:1020px;
+  height:420px;
   overflow:hidden;
   position:relative;
   display:none;
@@ -251,8 +250,8 @@ footer {
 */
 
 .slides_container a {
-  width:570px;
-  height:270px;
+  width:1020px;
+  height:420px;
   display:block;
 }
 
@@ -262,8 +261,8 @@ footer {
 
 #slides .next,#slides .prev {
   position:absolute;
-  top:107px;
-  left:-39px;
+  top:177px;
+  left:-24px;
   width:24px;
   height:43px;
   display:block;
@@ -271,7 +270,7 @@ footer {
 }
 
 #slides .next {
-  left:585px;
+  left:1020px;
 }
 
 /*
@@ -279,7 +278,7 @@ footer {
 */
 
 .pagination {
-  margin:26px 240px 0;
+  margin:26px 450px;
   width:100px;
 }
 
