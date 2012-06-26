@@ -190,8 +190,7 @@ footer {
   }
 }
 
-.home_slideshow {
-  height: 520px;
+.box_container {
   h1 {
     position: relative;
     top: -25px;
@@ -208,20 +207,22 @@ footer {
     text-align: center;
     text-shadow: 0 1px 1px rgba(250,250,250,0.9);
   }
+  ul {
+    list-style: none;
+  }
 }
 
 /*
   Slideshow
 */
 
-
 #slides {
-  position: absolute;
-  top:98px;
-  left:39px;
+  position: relative;
+  left:9px;
   z-index:100;
   box-shadow: 2px 4px 8px rgba(0,0,0,0.5), 0px -2px 8px rgba(0,0,0,0.5);
   height: 420px;
+  width: 1020px;
   border: solid 2px #ededed;
   border-radius: 5px;
 }
@@ -301,4 +302,15 @@ footer {
 
 .pagination li.current a {
   background-position:0 -12px;
+}
+
+/* My Card */
+
+.mycard {
+  position: relative;
+  height: 500px;
+  width: 300px;
+  background-color: #cdcdcd;
+  padding-bottom: 20px;
+  border-radius: 5px;
 }

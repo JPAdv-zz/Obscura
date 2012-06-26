@@ -44,6 +44,8 @@ describe "Static pages" do
     it { should have_selector('h1', :text => 'Contact') }
     #Tests that the title contains 'Obscure | Contact'
     it { should have_selector('title', :text => full_title('Contact')) }
+    #Tests that the page has a div class called mycard
+    it { should have_selector('div.mycard') }
   end
 
   #Another way of creating the above tests.
