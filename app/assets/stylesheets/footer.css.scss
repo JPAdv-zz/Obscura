@@ -1,0 +1,35 @@
+/* The website's footer */
+footer {
+  position: relative;
+  background-color: #212329;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.7);
+  margin-top: -200px;
+  height: 200px;
+  clear: both;
+	border-top: 5px solid #353535;
+	color: #999;
+  padding: 5px;
+  font-weight: bold;
+	a {
+    position: relative;
+    top: -5px;
+    font-size: 14px;
+    color: #555;
+    &:hover { 
+      color: #DDD;
+    }
+  }  
+  small { 
+  	float: left; 
+  }
+  nav { 
+    ul.footer-links {
+  	float: right;
+  	list-style: none;
+  	li {
+      	float: right;
+      	margin-left: 10px;
+    	}
+  	}
+  }
+}

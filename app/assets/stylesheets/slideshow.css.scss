@@ -1,0 +1,91 @@
+/*
+  Slideshow
+*/
+
+#slides {
+  position: relative;
+  left:9px;
+  z-index:100;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.5), 0px -2px 8px rgba(0,0,0,0.5);
+  height: 420px;
+  width: 1020px;
+  border: solid 2px #ededed;
+  border-radius: 5px;
+}
+
+/*
+  Slides container
+  Important:
+  Set the width of your slides container
+  Set to display none, prevents content flash
+*/
+
+.slides_container {
+  width:1020px;
+  height:420px;
+  overflow:hidden;
+  position:relative;
+  display:none;
+}
+
+/*
+  Each slide
+  Important:
+  Set the width of your slides
+  If height not specified height will be set by the slide content
+  Set to display block
+*/
+
+.slides_container a {
+  width:1020px;
+  height:420px;
+  display:block;
+}
+
+/*
+  Next/prev buttons
+*/
+
+#slides .next,#slides .prev {
+  position:absolute;
+  top:177px;
+  left:-24px;
+  width:24px;
+  height:43px;
+  display:block;
+  z-index:101;
+}
+
+#slides .next {
+  left:1020px;
+}
+
+/*
+  Pagination
+*/
+
+.pagination {
+  margin:26px 450px;
+  width:100px;
+}
+
+.pagination li {
+  float:left;
+  margin:0 1px;
+  list-style:none;
+}
+
+.pagination li a {
+  display:block;
+  width:12px;
+  height:0;
+  padding-top:12px;
+  background-image:url(./img/pagination.png);
+  background-position:0 0;
+  float:left;
+  overflow:hidden;
+}
+
+.pagination li.current a {
+  background-position:0 -12px;
+}
