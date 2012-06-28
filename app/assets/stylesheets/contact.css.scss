@@ -1,11 +1,11 @@
-/* My Card */
-
+// My Card
+// based on http://jsfiddle.net/nicooprat/GDdtS/.
 .flip {
   -webkit-perspective: 800;
   width: 600px;
   height: 300px;
   position: relative;
-  margin: 50px auto;
+  margin: 10px auto;
 }
 .flip .card.flipped {
   -webkit-transform: rotatey(-180deg);
@@ -38,9 +38,6 @@
   cursor: pointer;
 }
 .flip .card .back {
-  ul {
-
-  }
   font-size: 23px;
   -webkit-transform: rotatey(-180deg);
   background-image: url(cardTextureDark.png);
