@@ -9,13 +9,24 @@
 			This is the front.
 		</div>
 		<div class='face back'>
+			<div id='reachMetext'>
+				Reach me in these awesome websites!
+			</div>
 			<ul>
-				<li>GitHub</li>
-				<li>Google+</li>
-				<li>Twitter</li>
-				<li>Facebook</li>
-				<li>DeviantArt</li>
+				<li><%= link_to image_tag("contact_logos/fbook.png", size:"85x105", alt:"Facebook", id:"fbook"), 
+					"http://www.facebook.com"%></li>
+				<li><%= link_to image_tag("contact_logos/twitter.png", size:"115x105", alt:"Twitter", id:"twitter"), 
+					"http://www.twitter.com"%></li>
+				<li><%= link_to image_tag("contact_logos/dbart.png", size:"115x105", alt:"DeviantArt", id:"dbart"), 
+					"http://www.devianart.com"%></li>
+				<li><%= link_to image_tag("contact_logos/gplus.png", size:"115x105", alt:"Google+", id:"gplus"), 
+					"http://plus.google.com"%></li>
+				<li><%= link_to image_tag("contact_logos/github.png", size:"115x105", alt:"Github", id:"github"), 
+					"http://www.github.com"%></li>
 			</ul>
+			<small>
+				Click again to go back to the front.
+			</small>
 		</div>
 	</div>
 </div>
