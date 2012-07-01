@@ -12,12 +12,14 @@
   position: relative;
   margin: 10px auto;
 }
+
 //Adds the flip effect on the card.
 .flip .card.flipped {
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
   -o-transform: rotateY(-180deg);
 }
+
 //Preserves the contents of the card.
 .flip .card {
   width: 100%;
@@ -29,6 +31,7 @@
   -moz-transition: 0.7s;
   -o-transition: 0.7s;
 }
+
 //Determines whether the face of the card can be shown.
 .flip .card .face {
   width: 100%;
@@ -52,6 +55,7 @@
     }
   }
 }
+
 //Front side of the card.
 .flip .card .front {
   position: absolute;
@@ -85,6 +89,7 @@
     font-size: 12px;
   }
 }
+
 //Logos should go here.
 #github, #gplus, #twitter, #fbook, #dbart {
   position: relative;

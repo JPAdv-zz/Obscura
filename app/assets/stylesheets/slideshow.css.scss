@@ -1,7 +1,4 @@
-/*
-  Slideshow
-*/
-
+// Slideshow
 #slides {
   position: relative;
   left:9px;
@@ -13,13 +10,10 @@
   border: solid 1px rgba(0,0,0,0.7);
 }
 
-/*
-  Slides container
-  Important:
-  Set the width of your slides container
-  Set to display none, prevents content flash
-*/
-
+// Slides container
+// Important:
+// Set the width of your slides container
+// Set to display none, prevents content flash
 .slides_container {
   width:1020px;
   height:420px;
@@ -29,44 +23,37 @@
   border: solid 1px rgba(250,250,250,0.5);
 }
 
-/*
-  Each slide
-  Important:
-  Set the width of your slides
-  If height not specified height will be set by the slide content
-  Set to display block
-*/
-
+// Each slide
+// Important:
+// Set the width of your slides
+// If height not specified height will be set by the slide content
+// Set to display block
 .slides_container a {
   width:1020px;
   height:420px;
   display:block;
 }
 
-/*
-  Next/prev buttons
-*/
-
+// Next/prev buttons
 #slides .next,#slides .prev {
   position:absolute;
   top:177px;
-  left:-24px;
-  width:24px;
-  height:43px;
+  left:3px;
+  width:70px;
+  height:70px;
   display:block;
-  z-index:-001;
+  z-index:10;
 }
 
 #slides .next {
-  left:1022px;
+  left:950px;
 }
 
-/*
-  Pagination
-*/
-
+// Pagination
 .pagination {
-  margin:26px 450px;
+  position: absolute;
+  top: -50px;
+  margin:26px 0px;
   width:100px;
 }
 
