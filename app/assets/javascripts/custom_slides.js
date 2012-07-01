@@ -4,7 +4,7 @@
 $(function(){
 	$('#slides').slides({
 		preload: true,
-		preloadImage: 'img/loading.gif',
+		preloadImage: '/img/loading.gif',
 		play: 5000,
 		pause: 2500,
 		effect: 'slide, fade',
@@ -20,6 +20,7 @@ $(function(){
 $(function (){
 	// Hide the controls.
 	$('.prev, .next, .pagination').hide();
+
 	//Set the event when the mouse hovers the #slides.
 	$('#slides').mouseenter(function () {
 		$('.prev, .next, .pagination').fadeTo(500, 1.0);
