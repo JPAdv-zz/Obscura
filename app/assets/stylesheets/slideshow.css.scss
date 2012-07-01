@@ -52,9 +52,10 @@
 // Pagination
 .pagination {
   position: absolute;
-  top: -50px;
-  margin:26px 0px;
+  top: 5px;
+  margin:10px 400px;
   width:100px;
+  z-index:11;
 }
 
 .pagination li {

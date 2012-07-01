@@ -4,12 +4,14 @@
 $(function(){
 	$('#slides').slides({
 		preload: true,
-		preloadImage: '/img/loading.gif',
+		preloadImage: '/assets/img/loading.gif',
 		play: 5000,
 		pause: 2500,
 		effect: 'slide, fade',
        	crossfade: true,
-		hoverPause: true
+		hoverPause: true,
+		slideSpeed: 350,
+		slideEasing: "easeInOutQuad"
 	});	
 });
 
