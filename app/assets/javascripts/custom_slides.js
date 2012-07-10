@@ -30,3 +30,15 @@ $(function (){
 		$('.prev, .next, .pagination').fadeTo(500, 0.0);
 	});
 });
+
+/*
+ Makes the buttons look clickable.
+ */
+$(function (){
+	$('.prev, .next').mousedown(function () {
+		$(this).css("top", "180px");
+		$(this).mouseup(function () {
+			$(this).css("top", "177px")
+		});
+	});
+});
