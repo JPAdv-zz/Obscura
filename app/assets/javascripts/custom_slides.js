@@ -21,13 +21,13 @@ $(function(){
  */
 $(function (){
 	// Hide the controls.
-	$('.prev, .next').hide();
+	$('.prev, .next, .pagination').hide();
 
 	//Set the event when the mouse hovers the #slides.
 	$('#slides').mouseenter(function () {
-		$('.prev, .next').fadeTo(500, 1.0);
+		$('.prev, .next, .pagination').fadeTo(500, 1.0);
 	}).mouseleave(function () {
-		$('.prev, .next').fadeTo(500, 0.0);
+		$('.prev, .next, .pagination').fadeTo(500, 0.0);
 	});
 });
 
