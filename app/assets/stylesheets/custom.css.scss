@@ -23,32 +23,40 @@ html {
 	 }
 	 color: gray;
    background-image: url(/assets/img/bgLines.png);
-	 background-color: #2a2b2b;
+	 background-color: #4b6381;
 	 width: auto;
   }
 }
 
 .container {
-  background-image: url(bg.gif);
+  background-image: url(bg3.png);
   position: absolute;
   top: 0px;
   left: 0px;
   right: 0px;
   padding-top: 100px;
   margin: auto;
-  background-color: #fff;
-  box-shadow: -8px 0px 20px rgba(0,0,0,0.5), 
-          8px 0px 20px rgba(0,0,0,0.5), 0px 8px 20px rgba(0,0,0,0.5);
+  background-color: #d0d0d0;
+  box-shadow: -3px 0px 20px rgba(0,0,0,0.5), 
+          3px 0px 20px rgba(0,0,0,0.5), 0px 3px 20px rgba(0,0,0,0.5);
   width: 1100px;
   border-left: solid 2px #ededed;
   border-right: solid 2px #ededed;
   z-index: 0;
+  .break {
+    position: relative;
+    margin:auto;
+    background-image: url(bgBreak.png);
+    height:6px;
+    width:90%;
+  }
 }
 
 .box {
   position: relative;
   top: 40px;
-  background-color: #ededed;
+  background-image: url(bg3.png);
+  background-color: #d0d0d0;
   min-height: 100%;
 }
 
