@@ -21,16 +21,6 @@ footer {
     }
   }  
   small { 
-  	float: left; 
-  }
-  nav { 
-    ul.footer-links {
-  	float: right;
-  	list-style: none;
-  	li {
-      	float: right;
-      	margin-left: 10px;
-    	}
-  	}
+  	text-align: center; 
   }
 }
