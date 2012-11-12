@@ -26,7 +26,7 @@ group :assets do
 end
 
 gem 'fancybox-rails', :git => 'https://github.com/sverigemeny/fancybox-rails'
-gem 'jquery-rails', '2.0.0'
+gem 'jquery-rails'
 
 #Tests for Ubuntu
 #group :test do
