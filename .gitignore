@@ -8,7 +8,7 @@
 /.bundle
 
 # Ignore the site.
-_site
+_site/*
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
