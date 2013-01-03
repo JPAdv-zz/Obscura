@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  		<title>
+  			<%= full_title(yield(:title)) %>
+  		</title>
+  		<%= stylesheet_link_tag    "application", :media => "all" %>	
+  		<%= javascript_include_tag "application" %>	
+  		<%= csrf_meta_tags %>
+  		<%= render 'layouts/shin' %>
+	</head>
+	
+	<!-- The main body of the website -->
+	<body>
+		<!-- The main header of the site. -->
+		<%= render 'layouts/header' %>
+		<!-- A container that holds the contents of the site. -->
+		<div class='container'>
+			<div class='box'>
+				<div class='break'></div>
+				<div class="main">
+					<div class="box_container">
+						<%= yield %>
+					</div>
+				</div>
+			</div>
+			<%= render 'layouts/footer' %>
+		</div>
+	</body>
+</html>

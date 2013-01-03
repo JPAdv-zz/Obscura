@@ -5,16 +5,17 @@
 header {
   display: block;
   z-index: 100;
-  background-color: #ededed;
-  border-top: solid 1px #fdfdfd;
+  background-image: url(bgFoot.png);
+  background-color: #3d3d3d;
 	position: relative;
-  top: 40px;
+  //top: 40px;
   margin: auto;
+  min-width:900px;
   padding: 10px;
-	width: 900px;
+	//width: 1100px;
   height: 40px;
-  border-bottom: solid 2px #3d3d3d;
-  border-radius: 4px;
+  border-bottom: solid 4px #353535;
+  //border-radius: 4px;
 	ul {
 		float: right;
 		list-style: none;
@@ -31,11 +32,11 @@ header {
     width: 130px;
     height: 21px;
     right: 20px;
-    text-shadow: 0 1px 1px rgba(250,250,250,0.75);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.75);
     margin: 30px;
     float: left;
     font-size: 1.7em;
-    color: #3d3d3d;
+    color: #cacaca;
     text-transform: uppercase;
     letter-spacing: -1px;
     border-bottom: solid 4px #cacaca;
@@ -52,16 +53,16 @@ header {
   display: block;
   top: -19px;
   padding: 20px;
-  width: 60px;
+  width: auto;
   height: 15px;
   margin: 10px;
   text-align: center;
-  text-shadow: 0 1px 1px rgba(250,250,250,0.75);
-  color: #3d3d3d;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.75);
+  color: #cacaca;
   border-bottom: solid 4px #cacaca;
   font-weight: bold;
   &:hover {
-    color: #3d3d3d;
+    color: #cacaca;
     border-bottom: solid 4px #8D13BA;
     text-decoration: none;
   }
@@ -70,7 +71,6 @@ header {
 #nav-hom {
   left: 90px;
   &:hover {
-    color: #3d3d3d;
     border-bottom: solid 4px #2585ff;
     text-decoration: none;
   }
@@ -79,16 +79,14 @@ header {
 #nav-tut {
   left: 60px;
   &:hover {
-    color: #3d3d3d;
     border-bottom: solid 4px #5BBA13;
     text-decoration: none;
   }
 }
 
-#nav-abt {
+#nav-dwn {
   left: 30px;
   &:hover {
-    color: #3d3d3d;
     border-bottom: solid 4px #BA4D13;
     text-decoration: none;
   }

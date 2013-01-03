@@ -68,6 +68,9 @@
   color: black;
   text-shadow: 0px 2px 1px rgba(255,255,255, 0.5);
   cursor: pointer;
+  #info {
+    font-size: 16px;
+  }
   small {
     position: relative;
     font-weight: bold;
@@ -83,7 +86,7 @@
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
   -o-transform: rotateY(-180deg);
-  background-image: url(cardTextureDark.png);
+  background-image: url(bgFoot.png);
   color: #98989c;
   text-shadow: 0px 1px 1px rgba(0,0,0, 0.5);
   cursor: pointer;

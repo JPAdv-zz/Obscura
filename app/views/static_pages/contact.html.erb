@@ -1,16 +1,12 @@
-<% provide(:title, 'Contact') %>
-<h1>Contact</h1>
-<p>
-	Some of my contacts will be here.
-</p>
+<% provide(:title, 'My Card') %>
 <div class='flip'>
 	<div class='card'>
 		<div class='face front'>
-			<div id='info'>
-				This is the front
-			</div>
 			<div id='mylogo'>
-
+				<%= gravatar_pro() %>
+			</div>
+			<div id='info'>
+				<%= gravatar_info() %>
 			</div>
 			<small>
 				Flip me!

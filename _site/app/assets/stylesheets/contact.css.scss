@@ -1,0 +1,141 @@
+// The css that stylizes the card in the contacts page.
+// Based on http://jsfiddle.net/nicooprat/GDdtS/
+// Modified by: Jose Padilla to fit the website.
+//
+// There are still a few issues with the opera browser.
+// For some reason, the animation only works in certain
+// versions of chrome.
+
+//This is the size of the card.
+.flip {
+  -webkit-perspective: 800;
+  -moz-perspective: 800;
+  -o-perspective: 800;
+  width: 600px;
+  height: 300px;
+  position: relative;
+  margin: 10px auto;
+}
+
+//Adds the flip effect on the card.
+.flip .card.flipped {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+}
+
+//Preserves the contents of the card.
+.flip .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -o-transition: 0.7s;
+}
+
+//Determines whether the face of the card can be shown.
+.flip .card .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 4px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.5);
+  border: 1px solid rgba(250,250,250, 0.5);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  z-index: 2;
+  font-size: 3em;
+  text-align: center;
+  ul {
+    float: right;
+    list-style: none;
+    li {      
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+//Front side of the card.
+.flip .card .front {
+  position: absolute;
+  z-index: 1;
+  background-image: url(cardTexture.png);
+  color: black;
+  text-shadow: 0px 2px 1px rgba(255,255,255, 0.5);
+  cursor: pointer;
+  small {
+    position: relative;
+    font-weight: bold;
+    bottom: 0px;
+    font-size: 12px;
+  }
+}
+
+//Back side of the card.
+.flip .card .back {
+  font-size: 23px;
+  font-weight: bold;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  background-image: url(cardTextureDark.png);
+  color: #98989c;
+  text-shadow: 0px 1px 1px rgba(0,0,0, 0.5);
+  cursor: pointer;
+
+  #reachMetext {
+    position: relative;
+    top: 20px;
+  }
+
+  small {
+    position: relative;
+    top: 95px;
+    font-size: 12px;
+  }
+}
+
+//Logos should go here.
+#github, #gplus, #twitter, #fbook, #dbart {
+  position: relative;
+  left: 13px;
+  top: 70px;
+  padding-bottom: 6px;
+  border-bottom: 4px solid #88888c;
+  &:hover{
+    border-bottom: 4px solid #4a6ea9;
+  }
+}
+
+#twitter {
+    left: 0px;
+    &:hover{
+    border-bottom: 4px solid #00aced;
+  }
+}
+
+#dbart {
+    left: -10px;
+    &:hover{
+      border-bottom: 4px solid #c8da2f;
+    }
+}
+
+#gplus {
+  left: -20px;
+  &:hover{
+    border-bottom: 4px solid #ff5428;
+  }
+}
+
+#github {
+    left: -30px;
+    &:hover{
+    border-bottom: 4px solid #ff0000;
+  }
+}
