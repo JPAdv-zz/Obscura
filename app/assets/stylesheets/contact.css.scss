@@ -63,19 +63,39 @@
 //Front side of the card.
 .flip .card .front {
   position: absolute;
+  text-align: left;
   z-index: 1;
   background-image: url(cardTexture.png);
   color: black;
-  text-shadow: 0px 2px 1px rgba(255,255,255, 0.5);
+  text-shadow: 0px 1px 1px rgba(255,255,255, 0.5);
   cursor: pointer;
   #info {
-    font-size: 16px;
+    position: relative;
+    font-size: 14px;
+    top:5px;
   }
   small {
     position: relative;
     font-weight: bold;
     bottom: 0px;
     font-size: 12px;
+  }
+  .gravatar {
+    position:relative;
+    border-radius: 3px;
+    float: left;
+    margin: 5px;
+  }
+  #backInfo {
+    position:absolute;
+    height:300px;
+    width:600px;
+    z-index: -10;
+    top: 0px;
+    overflow:overlay;
+    overflow:hidden;
+    color:#dcdcdc;
+    text-shadow:0 0;
   }
 }
 

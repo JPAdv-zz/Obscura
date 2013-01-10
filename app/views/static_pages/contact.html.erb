@@ -6,11 +6,17 @@
 				<%= gravatar_pro() %>
 			</div>
 			<div id='info'>
-				<%= gravatar_info() %>
+					<%=  gravatar_info()
+					getName().html_safe %>
+					<b>About: </b><%= getAboutMe().html_safe %>
+					<b>Location: </b><%= getLocation().html_safe %>
 			</div>
 			<small>
 				Flip me!
 			</small>
+			<div id="backInfo">
+				<%= getAboutMe().html_safe %>
+			</div>
 		</div>
 		<div class='face back'>
 			<div id='reachMetext'>
