@@ -14,6 +14,7 @@ module ApplicationHelper
 	end 													#End of method definition
 
 	def gravatar_pro
+    #Insert your email 
     user = 'jose.padilla.88@gmail.com'
     options = { size: 200 }
   	gravatar_id = Digest::MD5::hexdigest(user.downcase)
@@ -23,6 +24,7 @@ module ApplicationHelper
   end
 
   def gravatar_info
+    #Insert your email
     user = 'jose.padilla.88@gmail.com'
   	gravatar_id = Digest::MD5::hexdigest(user.downcase)
   	gravatar_url = "https://secure.gravatar.com/#{gravatar_id}.xml"
