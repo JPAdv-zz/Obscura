@@ -18,23 +18,23 @@ $(function(){
 /* 
  Shows and hides the controls of the slideshow upon the mouse hovering the
  slideshow. Note: I believe SlidesJS does not currently support this.
- 
+ */
 $(function (){
 	// Hide the controls.
-	$('.pagination').hide();
+	$('.prev, .next').hide();
 
 	//Set the event when the mouse hovers the #slides.
 	$('#slides').mouseenter(function () {
-		$('.prev, .next, .pagination').fadeTo(500, 1.0);
+		$('.prev, .next').fadeTo(500, 1.0);
 	}).mouseleave(function () {
-		$('.pagination').fadeTo(500, 0.0);
+		$('.prev, .next').fadeTo(500, 0.0);
 	});
 });
-*/
+
 
 /*
  Makes the buttons look clickable.
- */
+
 $(function (){
 	$('.prev, .next').mousedown(function () {
 		//Check which is being clicked and apply properties.
@@ -54,3 +54,4 @@ $(function (){
 		});
 	});
 });
+*/

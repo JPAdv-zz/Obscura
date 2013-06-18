@@ -11,8 +11,8 @@
   -webkit-perspective: 800;
   -moz-perspective: 800;
   -o-perspective: 800;
-  width: 600px;
-  height: 300px;
+  width: 500px;
+  height: 600px;
   position: relative;
   margin: 10px auto;
 }
@@ -41,9 +41,9 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  border-radius: 4px;
-  box-shadow: 0px 3px 8px rgba(0,0,0,0.5);
-  border: 1px solid rgba(250,250,250, 0.5);
+  border-radius: 2px;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+  border: 1px solid rgba(90,90,90, 0.7);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
@@ -65,7 +65,8 @@
   position: absolute;
   text-align: left;
   z-index: 1;
-  background-image: url(cardTexture.png);
+  //background-image: url(cardTexture.png);
+  background-color:#f4f4f4;
   color: black;
   text-shadow: 0px 1px 1px rgba(255,255,255, 0.5);
   cursor: pointer;
@@ -75,26 +76,35 @@
     top:5px;
   }
   small {
-    position: relative;
+    position: fixed;
+    text-align: center;
+    padding: 6px;
     font-weight: bold;
-    bottom: 0px;
-    font-size: 12px;
+    bottom: -1px;
+    font-size: 17px;
+    background-color: #a43535;
+    width: 5px;
+    right: -1px;
+    color: white;
+    text-shadow: 0px 1px 1px rgba(0,0,0, 0.1);
+    border-top-left-radius: 6px;
   }
   .gravatar {
-    position:relative;
-    border-radius: 3px;
+    position: relative;
+    border-radius: 100px;
+    border: 5px solid rgba(0,0,0,0.1);
     float: left;
     margin: 5px;
   }
   #backInfo {
     position:absolute;
-    height:300px;
-    width:600px;
+    height:600px;
+    width:500px;
     z-index: -10;
     top: 0px;
     overflow:overlay;
     overflow:hidden;
-    color:#dcdcdc;
+    color: rgba(205,205,205,0.1);
     text-shadow:0 0;
   }
 }
@@ -106,7 +116,8 @@
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
   -o-transform: rotateY(-180deg);
-  background-image: url(bgFoot.png);
+  //background-image: url(bgFoot.png);
+  background:#404040;
   color: #98989c;
   text-shadow: 0px 1px 1px rgba(0,0,0, 0.5);
   cursor: pointer;
@@ -157,7 +168,7 @@
 }
 
 #github {
-    left: -30px;
+    left: 15px;
     &:hover{
     border-bottom: 4px solid #ff0000;
   }
