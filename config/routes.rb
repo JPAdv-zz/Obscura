@@ -4,9 +4,9 @@ Obscura::Application.routes.draw do
 
   root to: 'static_pages#home'
 
-  match '/tutorials',    to: 'static_pages#tutorials'
-  match '/contact',  to: 'static_pages#contact'
-  match '/downloads', to: 'static_pages#downloads' #get "static_pages/downloads" when using relative paths. 
+  match '/tutorials',   to: 'static_pages#tutorials'
+  match '/contact',     to: 'static_pages#contact'
+  match '/downloads',   to: 'static_pages#downloads' #get "static_pages/downloads" when using relative paths. 
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
