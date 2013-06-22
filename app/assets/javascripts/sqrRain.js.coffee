@@ -4,7 +4,9 @@
 ###
 
 $ -> init()
-$ -> $('#canvaSquare').click ->  stop()
+$ -> $('#canvaSquare').click -> 
+				stop()
+				return
 
 
 # Initial variables
@@ -39,7 +41,7 @@ Rain = () ->
 	this.y = Math.round(Math.random() * canvas.height)
 	this.speed = Math.random() * 1.05
 	this.opacity = Math.random() * 0.5
-	this.width = (Math.random() * 100) + 1
+	this.width = (Math.random() * 90) + 1
 	this.height = this.width
 	return
 
@@ -51,12 +53,12 @@ addDrop = () ->
 	return
 
 animation = () ->
-	#Update()
+	Update()
 	Draw()
 	return
 
 blank = () ->
-	bufferContext.fillStyle = '#e1e3e3'
+	bufferContext.fillStyle = '#edeef0'
 	bufferContext.fillRect 0, 0, bufferContext.canvas.width, bufferContext.canvas.height
 	return
 
@@ -64,6 +66,8 @@ Update = () ->
 	for e, i in rainDropsArray
 		if rainDropsArray[i].x <= canvas.width + rainDropsArray[i].width
 			rainDropsArray[i].x += Math.random() * 0.20 + rainDropsArray[i].speed
+			rainDropsArray[i].width += 1.001
+			rainDropsArray[i].height = rainDropsArray[i].width 
 		else
 			rainDropsArray[i].x = -1 * rainDropsArray[i].width
 	return
@@ -72,7 +76,7 @@ Draw = () ->
 	context.save()
 	blank()
 	for e, i in rainDropsArray
-		bufferContext.fillStyle = "rgba(0,0,3," + rainDropsArray[i].opacity + ")"
+		bufferContext.fillStyle = "rgba(77,77,77," + rainDropsArray[i].opacity + ")"
 		bufferContext.fillRect rainDropsArray[i].x, rainDropsArray[i].y, rainDropsArray[i].width, rainDropsArray[i].height
 	context.drawImage bufferCanvas, 0, 0, bufferCanvas.width, bufferCanvas.height
 	context.restore()
