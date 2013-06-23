@@ -4,7 +4,7 @@ Obscura::Application.routes.draw do
 
   root to: 'static_pages#home'
 
-  match '/tutorials',   to: 'static_pages#tutorials'
+  match '/tutorials',   to: 'posts#index'
   match '/contact',     to: 'static_pages#contact'
   match '/downloads',   to: 'static_pages#downloads' #get "static_pages/downloads" when using relative paths. 
   

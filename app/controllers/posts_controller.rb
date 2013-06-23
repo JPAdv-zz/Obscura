@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+
+   http_basic_authenticate_with :name => "jpadv", :password => "secret blog titan", :except => [:index, :show]
+
   # GET /posts
   # GET /posts.json
   def index
@@ -20,6 +23,7 @@ class PostsController < ApplicationController
       format.json { render json: @post }
     end
   end
+
 
   # GET /posts/new
   # GET /posts/new.json

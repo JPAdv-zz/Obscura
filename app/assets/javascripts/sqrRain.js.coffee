@@ -68,7 +68,7 @@ blank = () ->
 Update = () ->
 	for e, i in rainDropsArray
 		if rainDropsArray[i].x <= canvas.width + rainDropsArray[i].width
-			rainDropsArray[i].x += Math.random() * 0.20 + rainDropsArray[i].speed
+			#rainDropsArray[i].x += Math.random() * 0.20 + rainDropsArray[i].speed
 			rainDropsArray[i].width += 1.001
 			rainDropsArray[i].height = rainDropsArray[i].width 
 		else
@@ -82,7 +82,7 @@ Draw = (s) ->
 	if s == 'circle'
 		for e, i in rainDropsArray
 			bufferContext.beginPath()
-			bufferContext.arc rainDropsArray[i].x, rainDropsArray[i].y, rainDropsArray[i].width - 20, 0, 2 * Math.PI, false
+			bufferContext.arc rainDropsArray[i].x, rainDropsArray[i].y, rainDropsArray[i].width / 2, 0, 2 * Math.PI, false
 			bufferContext.fillStyle = "rgba(77,77,77," + rainDropsArray[i].opacity + ")"
 			bufferContext.fill()
 			bufferContext.lineWidth = 0.5
