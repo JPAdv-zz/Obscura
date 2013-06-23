@@ -3,19 +3,22 @@
 	@Author: Jose Padilla
 ###
 
+
 $ -> init()
 $ -> $('#canvaSquare').click -> 
 				stop()
 				return
 
-
 # Initial variables
-canvas = context = bufferCanvas = bufferContext = timer = anim = null
+shape = canvas = context = bufferCanvas = bufferContext = timer = anim = null
 rainDropsArray = []
 MAX_DROPS = 50
 
 # Functions
 init = () ->
+
+	shape = document.getElementById('canvaSquare').dataset['shape']
+
 	# Get the canvas and the context
 	canvas = document.getElementById('canvaSquare')
 	context = canvas.getContext('2d')
@@ -30,7 +33,7 @@ init = () ->
 
 	timer = setInterval addDrop, 10
 
-	Draw()
+	Draw(shape)
 
 	anim = setInterval animation, 5
 
@@ -54,7 +57,7 @@ addDrop = () ->
 
 animation = () ->
 	Update()
-	Draw()
+	Draw(shape)
 	return
 
 blank = () ->
@@ -72,14 +75,28 @@ Update = () ->
 			rainDropsArray[i].x = -1 * rainDropsArray[i].width
 	return
 
-Draw = () ->
+Draw = (s) ->
 	context.save()
 	blank()
-	for e, i in rainDropsArray
-		bufferContext.fillStyle = "rgba(77,77,77," + rainDropsArray[i].opacity + ")"
-		bufferContext.fillRect rainDropsArray[i].x, rainDropsArray[i].y, rainDropsArray[i].width, rainDropsArray[i].height
-	context.drawImage bufferCanvas, 0, 0, bufferCanvas.width, bufferCanvas.height
-	context.restore()
+
+	if s == 'circle'
+		for e, i in rainDropsArray
+			bufferContext.beginPath()
+			bufferContext.arc rainDropsArray[i].x, rainDropsArray[i].y, rainDropsArray[i].width - 20, 0, 2 * Math.PI, false
+			bufferContext.fillStyle = "rgba(77,77,77," + rainDropsArray[i].opacity + ")"
+			bufferContext.fill()
+			bufferContext.lineWidth = 0.5
+			bufferContext.strokeStyle = 'rgba(60,50,103,0.5)'
+			bufferContext.stroke()
+		context.drawImage bufferCanvas, 0, 0, bufferCanvas.width, bufferCanvas.height
+		context.restore()
+	
+	if s == 'square'
+		for e, i in rainDropsArray
+			bufferContext.fillStyle = "rgba(77,77,77," + rainDropsArray[i].opacity + ")"
+			bufferContext.fillRect rainDropsArray[i].x, rainDropsArray[i].y, rainDropsArray[i].width, rainDropsArray[i].height
+		context.drawImage bufferCanvas, 0, 0, bufferCanvas.width, bufferCanvas.height
+		context.restore()
 	return
 
 stop = () ->
