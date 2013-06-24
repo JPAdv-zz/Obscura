@@ -11,7 +11,7 @@
   -webkit-perspective: 800;
   -moz-perspective: 800;
   -o-perspective: 800;
-  width: 500px;
+  width: 600px;
   height: 600px;
   position: relative;
   margin: 10px auto;
@@ -71,9 +71,11 @@
   text-shadow: 0px 1px 1px rgba(255,255,255, 0.5);
   cursor: pointer;
   #info {
-    position: relative;
-    font-size: 14px;
-    top:5px;
+  position: relative;
+  font-size: 14px;
+  top: 155px;
+  text-align: center;
+  float: left;
   }
   small {
     position: fixed;
@@ -94,12 +96,14 @@
     border-radius: 100px;
     border: 5px solid rgba(0,0,0,0.1);
     float: left;
+    left:200px;
+    top:100px;
     margin: 5px;
   }
   #backInfo {
     position:absolute;
     height:600px;
-    width:500px;
+    width:600px;
     z-index: -10;
     top: 0px;
     overflow:overlay;
@@ -117,7 +121,7 @@
   -moz-transform: rotateY(-180deg);
   -o-transform: rotateY(-180deg);
   //background-image: url(bgFoot.png);
-  background:#404040;
+  background:#292D31;
   color: #98989c;
   text-shadow: 0px 1px 1px rgba(0,0,0, 0.5);
   cursor: pointer;
@@ -128,8 +132,10 @@
   }
 
   small {
-    position: relative;
-    top: 95px;
+    position: absolute;
+    text-align: center;
+    left:45%;
+    bottom: 15px;
     font-size: 12px;
   }
 }
@@ -138,7 +144,7 @@
 #github, #gplus, #twitter, #fbook, #dbart {
   position: relative;
   left: 13px;
-  top: 70px;
+  top: 200px;
   padding-bottom: 6px;
   border-bottom: 4px solid #88888c;
   &:hover{
@@ -147,29 +153,33 @@
 }
 
 #twitter {
+    $twitter : #00aced;
     left: 0px;
     &:hover{
-    border-bottom: 4px solid #00aced;
+    border-bottom: 4px solid $twitter;
   }
 }
 
 #dbart {
+    $dbart: #c8da2f;
     left: -10px;
     &:hover{
-      border-bottom: 4px solid #c8da2f;
+      border-bottom: 4px solid $dbart;
     }
 }
 
 #gplus {
+  $gplus : #ff5428;
   left: -20px;
   &:hover{
-    border-bottom: 4px solid #ff5428;
+    border-bottom: 4px solid $gplus;
   }
 }
 
 #github {
-    left: 15px;
+    $github : #ff0000;
+    left: -30px;
     &:hover{
-    border-bottom: 4px solid #ff0000;
+    border-bottom: 4px solid $github;
   }
 }
