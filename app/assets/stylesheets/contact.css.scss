@@ -67,15 +67,16 @@
   z-index: 1;
   //background-image: url(cardTexture.png);
   background-color:#f4f4f4;
-  color: black;
+  color: #4B4F53;
   text-shadow: 0px 1px 1px rgba(255,255,255, 0.5);
   cursor: pointer;
   #info {
-  position: relative;
-  font-size: 14px;
-  top: 155px;
-  text-align: center;
-  float: left;
+    position: relative;
+    font-size: 14px;
+    top: 110px;
+    height: 280px;
+    text-align: center;
+    float: left;
   }
   small {
     position: fixed;
@@ -84,7 +85,7 @@
     font-weight: bold;
     bottom: -1px;
     font-size: 17px;
-    background-color: #a43535;
+    background-color: #624bb5;
     width: 5px;
     right: -1px;
     color: white;
@@ -94,7 +95,7 @@
   .gravatar {
     position: relative;
     border-radius: 100px;
-    border: 5px solid rgba(0,0,0,0.1);
+    border: 5px solid rgba(98,79,190,0.9);
     float: left;
     left:200px;
     top:100px;
@@ -108,7 +109,7 @@
     top: 0px;
     overflow:overlay;
     overflow:hidden;
-    color: rgba(205,205,205,0.1);
+    color: rgba(225,225,225,0.1);
     text-shadow:0 0;
   }
 }

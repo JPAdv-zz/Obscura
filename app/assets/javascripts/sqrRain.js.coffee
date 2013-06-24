@@ -13,8 +13,14 @@ $ -> $('#canvaSquare').click ->
 shape = canvas = context = bufferCanvas = bufferContext = timer = anim = null
 rainDropsArray = []
 MAX_DROPS = 50
+TIMER_SPEED = 10
+ANIMATION_SPEED = 5
 
-# Functions
+###
+ Functions
+###
+
+# Initialize the animation.
 init = () ->
 
 	shape = document.getElementById('canvaSquare').dataset['shape']
@@ -31,11 +37,11 @@ init = () ->
 	bufferContext.canvas.width = context.canvas.width
 	bufferContext.canvas.height = context.canvas.height
 
-	timer = setInterval addDrop, 10
+	timer = setInterval addDrop, TIMER_SPEED
 
 	Draw(shape)
 
-	anim = setInterval animation, 5
+	anim = setInterval animation, ANIMATION_SPEED
 
 	return
 
@@ -77,6 +83,7 @@ Update = () ->
 
 Draw = (s) ->
 	context.save()
+
 	blank()
 
 	if s == 'circle'
